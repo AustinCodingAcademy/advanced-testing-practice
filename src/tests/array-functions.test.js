@@ -12,7 +12,7 @@ function findBarney(name){
   return name === "Barney";
 }
 //head should find the first element in the array "Jon"
-describe("head", () => {
+describe("my super awesome function head", () => {
   it("should return the first element of an array 'Jon'", () => {
     expect(head(names)).toEqual("Jon");
   });
@@ -44,6 +44,13 @@ describe("sort", () => {
 
 //filter should return an array with names of length 3
 //["Jon","Bob","Ted","Axe"]
+describe("my greatest function ever, filter", () => {
+  it("filter should return an array with names of length 3", () => {
+    let filteredArray = filter(names,findThree);
+
+    expect(filteredArray).toEqual(["Jon","Bob","Ted","Axe"]);
+  });
+});
 
 //find should find one name of "Barney"
 
