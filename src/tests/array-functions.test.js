@@ -42,9 +42,16 @@ describe("sort", () => {
   });
 });
 
+
 //filter should return an array with names of length 3
 //["Jon","Bob","Ted","Axe"]
-
+describe("my greatest function ever, filter", () => {
+  it("filter should return an array with names of length 3", () => {
+    let filteredArray = filter(names, findThree);
+    
+    expect(filteredArray).toEqual(["Jon", "Bob", "Ted", "Axe"]);
+  });
+});
 //find should find one name of "Barney"
 
 //findLast should find the last name of "Axe"
