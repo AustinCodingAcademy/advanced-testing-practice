@@ -31,7 +31,7 @@ describe("map", () => {
 });
 //filter should take an array and return only specified numbers
 describe("filter", () => {
-  it("should return an array meeting only specific paramaters", () => {
+  it("should return an array with only even numbers", () => {
     expect(filter(myNumbers, findEvens)).toEqual([
       4,22,4,2
     ]);
