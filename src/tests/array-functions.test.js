@@ -18,6 +18,7 @@ describe("head", () => {
   });
 });
 
+d
 
 describe("map", () => {
   it("should prepend Hello to each name", () => {
@@ -53,5 +54,3 @@ describe("sort", () => {
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
