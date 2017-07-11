@@ -6,6 +6,7 @@
 //return the new array
 export function map(theArray, fnc){
 
+
 }
 
 //create a new array
@@ -14,7 +15,7 @@ export function map(theArray, fnc){
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
-
+    return theArray.filter(x => x.length === 3)
 }
 
 
