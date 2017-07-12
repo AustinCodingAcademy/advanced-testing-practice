@@ -5,7 +5,12 @@
 //add the returned value from fnc to the new array
 //return the new array
 export function map(theArray, fnc){
- 1st commit
+  let newArray = [];
+  for(var i = 0; i < theArray.length; i++){
+    let item = fnc(theArray[i]);
+    newArray.push(item);
+ }
+ return newArray;
 }
 
 //create a new array
@@ -14,7 +19,14 @@ export function map(theArray, fnc){
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
-
+  let filteredArray = [];
+  for(var i = 0; i < theArray.length; i++){
+    // let item = fnc(theArray[i]);
+    if (theArray[i].length === 3) {
+      filteredArray.push(theArray[i]);
+    }
+ }
+ return filteredArray;
 }
 
 
@@ -23,7 +35,13 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-
+  let foundArray = [];
+  for(var i = 0; i < theArray.length; i++){
+     if (theArray[i] === "Barney") {
+      foundArray.push(theArray[i]);
+    }
+ }
+ return foundArray;
 }
 
 
