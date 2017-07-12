@@ -1,4 +1,4 @@
-import {map,filter,find,findLast,head} from "../services/array-functions";
+import {map,filter,find,findLast,head,sort} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
 const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
 
@@ -37,7 +37,7 @@ describe("map", () => {
 describe("sort", () => {
   it("should return an array with numbers in order", () => {
     expect(sort(myNumbers)).toEqual([
-      1,2,3,4,5,7,22,55,99,1913
+      1, 2, 3, 4, 4, 5, 7, 22, 55, 99, 1913
     ]);
   });
 });
@@ -55,9 +55,17 @@ describe("filter", () => {
 });
 
 //find should find one name of "Barney"
-
+describe("find", () => {
+  it("find should find one name of 'Barney'", () => {
+    expect(find(names,"Barney")).toEqual("Barney");
+  });
+});
 //findLast should find the last name of "Axe"
-
+describe("findLast", () => {
+  it("findLast should find the last name of 'Axe'", () => {
+    expect(findLast(names)).toEqual("Axe");
+  });
+});
 //reverse should return an array with the elements in the opposite order
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
 //tail should return all elements in an array except the first one
