@@ -91,7 +91,7 @@ export function tail(theArray){
 //if false return theArray
 export function sort(theArray){
     // return sort(theArray);
-    let a = theArray.map(x => parseInt(x));
+    let a = theArray;
     
     var temp;
     var swapped;
@@ -107,5 +107,5 @@ export function sort(theArray){
             };
         };
     };
-    return a;
+return a;
 };
