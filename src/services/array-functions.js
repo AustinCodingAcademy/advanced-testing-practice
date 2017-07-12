@@ -90,15 +90,22 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
-    let c =theArray[i];
-    let n =theArray[i+1]
+    // return sort(theArray);
+    let a = theArray.map(x => parseInt(x));
+    
+    var temp;
+    var swapped;
+    while(swapped){
+        swapped = false;
+        for(let i =0; i < theArray.length-1; i++){
+            if(theArray[i] > theArray[i+1]){
+                temp = theArray[i];
+                theArray[i] = theArray[i+1];
+                theArray[i+1] = temp;
+                swapped = true;
 
-    for(let i = 0; i < theArray.length; i ++){
-        if(c > n){
-            theArray[c] = n;
-            theArray[]
-        }
-        
-    }
+            };
+        };
+    };
 
-}
+};
