@@ -67,7 +67,7 @@ describe("find", () => {
 
 describe("findLast", () => {
   it("should find the last name of Axe", () => {
-    expect(find(names, findLast)).toEqual("AxeLastName");
+    expect(find(names, findLast)).toEqual("Axe");
   });
 });
 

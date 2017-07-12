@@ -22,10 +22,10 @@ export function filter(theArray, fnc){
   for (let i = 0; i < theArray.length; i++) {
     if (fnc(theArray[i])) {
       filteredArray.push(theArray[i])
-      return filteredArray;
+      // return filteredArray;
     }
   }
-  return null;
+  return filteredArray;
 }
 // unsure about the t/f here, inherent? if there sufficient?
 
@@ -51,7 +51,8 @@ export function findLast(theArray){
 
 //return the first element of the array
 export function head(theArray){
-
+  firstIndex = theArray.shift();
+  return firstIndex;
 }
 
 //create a new array
