@@ -1,40 +1,52 @@
 
 //in the function map, create a new array and store in a variable
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop into the call to fnc
 //add the returned value from fnc to the new array
 //return the new array
 export function map(theArray, fnc){
-
+  let newArray = [];
+  newArray = theArray.map(fnc);
+  return newArray;
 }
 
 //create a new array
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
+  let filteredArray = [];
+  filteredArray = theArray.filter(fnc);
+  return filteredArray;
 
 }
 
 
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
-//fnc will return true or false, if true return the item 
+//fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
+  let findArray = [];
+  findArray = theArray.find(fnc);
+  return findArray;
 
 }
 
 
 //return the last item in theArray
 export function findLast(theArray){
-
+  let lastArray = [];
+  lastArray = theArray.findLast(fnc);
+  return lastArray;
 }
 
 //return the first element of the array
 export function head(theArray){
-
+  let head = [];
+  head = theArray.head(fnc);
+  return head;
 }
 
 //create a new array
@@ -42,7 +54,9 @@ export function head(theArray){
 //add the item from each loop to the new array
 //return the new array
 export function reverse(theArray){
-
+  let reversedArray = [];
+  reversedArray = theArray[theArray.reverse];
+  return reversedArray;
 }
 
 //create a new array
