@@ -90,26 +90,26 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
-    theArray.sort(function(a,b){
-    return a-b;
-    });
-}
-//     let a = theArray;
-    
-//     var temp;
-//     var swapped = true;
-//     if(swapped){
-//         swapped = false;
-//         for(let i =0; i < theArray.length-1; i++){
-//             if(a[i] > a[i+1]){
-//                 temp = a[i];
-//                 a[i] = a[i+1];
-//                 a[i+1] = temp;
-//                 swapped = true;
+    // theArray.sort(function(a,b){
+    // return a-b;
+    // });
 
-//             };
-//         };
-//     }else{
-//         return a;
-//     }
-// };
+    let a = theArray;
+    
+    var temp;
+    var swapped = true;
+    if(swapped){
+        swapped = false;
+        for(let i =0; i < theArray.length-1; i++){
+            if(a[i] > a[i+1]){
+                temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+                swapped = true;
+
+            };
+        };
+    }else{
+        return a;
+    }
+};
