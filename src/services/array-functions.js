@@ -94,8 +94,8 @@ export function sort(theArray){
     let a = theArray;
     
     var temp;
-    var swapped;
-    while(swapped){
+    var swapped = true;
+    if(swapped){
         swapped = false;
         for(let i =0; i < theArray.length-1; i++){
             if(a[i] > a[i+1]){
@@ -106,6 +106,7 @@ export function sort(theArray){
 
             };
         };
-    };
-return a;
+    }else{
+        return a;
+    }
 };
