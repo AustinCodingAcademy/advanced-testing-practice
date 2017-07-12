@@ -1,4 +1,4 @@
-import {map,filter,find,findLast} from "../services/array-functions";
+import {head,map,filter,find,findLast,sort} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
 const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
 
@@ -36,14 +36,22 @@ describe("map", () => {
 
 describe("sort", () => {
   it("should return an array with numbers in order", () => {
-    expect(sort(myNumbers)).toEqual([
-      1,2,3,4,5,7,22,55,99,1913
-    ]);
+    expect(sort(myNumbers)).toEqual([ 1, 2, 3, 4, 4, 5, 7, 22, 55, 99, 1913 ]);
   });
 });
 
-//filter should return an array with names of length 3
-//["Jon","Bob","Ted","Axe"]
+describe("filter", () => {
+  it("filter should return an array with names of length 3", () => {
+    // let filteredArray = filter(names, findThree)
+    expect(filter(names, findThree)).toEqual(["Jon","Bob","Ted","Axe"])
+  });
+});
+
+describe("find", () => {
+  it("find should find one name of 'Barney'", () => {
+    expect(find(names, findBarney)).toEqual("Barney")
+  });
+});
 
 //find should find one name of "Barney"
 
@@ -53,5 +61,3 @@ describe("sort", () => {
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
