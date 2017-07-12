@@ -90,15 +90,25 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
-    let c =theArray[i];
-    let n =theArray[i+1]
-
-    for(let i = 0; i < theArray.length; i ++){
-        if(c > n){
-            theArray[c] = n;
-            theArray[]
-        }
+   var a = theArray;
+    var swapped;
         
-    }
-
-}
+    do{
+            swapped = false;
+            for (var i=0; i < a.length-1; i++) {
+                if (a[i] > a[i+1]) {
+                    var temp = a[i];
+                    a[i] = a[i+1];
+                    a[i+1] = temp;
+                    swapped = true;
+                }
+                
+           
+            }
+        }while(swapped)
+    
+   ;}   
+      
+    
+ 
+        
