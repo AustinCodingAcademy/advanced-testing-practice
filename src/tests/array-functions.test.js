@@ -1,4 +1,4 @@
-import {map,filter,find,findLast} from "../services/array-functions";
+import {map,filter,find,findLast,head} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
 const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
 
@@ -45,7 +45,20 @@ describe("sort", () => {
 //filter should return an array with names of length 3
 //["Jon","Bob","Ted","Axe"]
 
+describe("filter", () => {
+  it("should return an array with names of length 3", () => {
+    let filteredArray = filter(names, findThree)
+    expect(filteredArray).toEqual(["Jon","Bob","Ted","Axe"]);
+  })
+});
+
+
 //find should find one name of "Barney"
+describe("find", () => {
+  it("should find one name of Barney", () => {
+    expect(find(names, findBarney)).toEqual("Barney");
+  });
+});
 
 //findLast should find the last name of "Axe"
 
@@ -53,5 +66,3 @@ describe("sort", () => {
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
