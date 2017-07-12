@@ -45,13 +45,63 @@ describe("sort", () => {
 //filter should return an array with names of length 3
 //["Jon","Bob","Ted","Axe"]
 
+describe("my best ever function filter", () => {
+  it("filter should return an array with names of length 3", () => {
+    let filteredArray = filter(names,findThree);
+    // we are calling the function as a variable here BUT we could write it out
+
+    expect(filteredArray).toEqual(["Jon","Bob","Ted","Axe"]);
+    // if you had a larger data set, just create a sample set for testing FYI
+  });
+});
+
 //find should find one name of "Barney"
+describe("find", () => {
+  it("should find one name of Barney", () => {
+    expect(find(names, findBarney)).toEqual("Barney");
+  });
+});
 
 //findLast should find the last name of "Axe"
+// do we have an array that contains Axe's last name? Using AxeLastName for now
+
+describe("findLast", () => {
+  it("should find the last name of Axe", () => {
+    expect(find(names, findLast)).toEqual("AxeLastName");
+  });
+});
 
 //reverse should return an array with the elements in the opposite order
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
+
+describe("reverse", () => {
+  it("should return an array with the elements in the opposite order", () => {
+    expect(reverse(names)).toEqual([
+      "Axe",
+      "Saul",
+      "Robin",
+      "Lilly",
+      "Barney",
+      "Ted",
+      "Bob",
+      "Jon"
+    ]);
+  });
+});
+
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
 
-
+describe("tail", () => {
+  it("should return all elements in an array except the first one", () => {
+    expect(tail(names)).toEqual([
+      "Bob",
+      "Ted",
+      "Barney",
+      "Lilly",
+      "Robin",
+      "Saul",
+      "Axe"
+    ]);
+  });
+});
