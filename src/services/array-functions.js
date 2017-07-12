@@ -1,57 +1,70 @@
 
 //in the function map, create a new array and store in a variable
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop into the call to fnc
 //add the returned value from fnc to the new array
 //return the new array
 export function map(theArray, fnc){
-
-}
+  const newArray = theArray.map(fnc);
+  return newArray;
+};
 
 //create a new array
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
+  const newArray = theArray.filter(fnc);
+  return newArray;
+};
 
-}
 
-
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
-//fnc will return true or false, if true return the item 
+//fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
+  const newArray = [];
+  newArray.push(theArray.find(fnc));
+  return newArray;
 
-}
+};
 
 
 //return the last item in theArray
 export function findLast(theArray){
-
-}
+  const newArray = [];
+  newArray.push(theArray[theArray.length-1]);
+  return newArray;
+};
 
 //return the first element of the array
 export function head(theArray){
-
-}
+  return theArray[0];
+};
 
 //create a new array
 //loop theArray in reverse order
 //add the item from each loop to the new array
 //return the new array
 export function reverse(theArray){
-
-}
+  const copyTheArray = theArray;
+  const newArray = copyTheArray.reverse();
+  return newArray;
+};
 
 //create a new array
 //loop theArray
 //add the item from each loop to the new array except the first item
 //return the new array
 export function tail(theArray){
-
-}
+  const reverseTheArray = theArray.reverse();
+  const newArray = reverseTheArray.slice(1);
+  return newArray;
+  // I am simply returning the original 'theArray' and its reversed.
+  // Can't figure out why
+};
 
 //implement the most basic sorting algorithm there is
 //assume the array will always have numbers
@@ -64,5 +77,7 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
+  var sorted = false;
+
 
 }
