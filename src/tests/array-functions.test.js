@@ -1,6 +1,6 @@
 import {map,filter,find,findLast,head} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
+const myNumbers = [4,3,55,4,22,99,1913,7,5,2,1];
 
 function addHello(name){
   return "Hello " + name;
@@ -12,7 +12,9 @@ function findBarney(name){
   return name === "Barney";
 }
 function sort(numbers){
-  return numbers.sort();
+  return numbers.sort(function(a,b){
+    return a-b;
+  });
 }
 
 
@@ -42,7 +44,7 @@ describe("map", () => {
 describe("sort", () => {
   it("should return an array with numbers in order", () => {
     expect(sort(myNumbers)).toEqual([
-      1,2,3,4,5,7,22,55,99,1913
+      1,2,3,4,4,5,7,22,55,99,1913
     ]);
   });
 });
@@ -58,6 +60,7 @@ describe("filter", () => {
     expect(filteredArray).toEqual(["Jon", "Bob", "Ted", "Axe"]);
   });
 });
+
 //find should find one name of "Barney"
 describe("find", () => {
   it("find should return the name 'Barney'",()=>{
