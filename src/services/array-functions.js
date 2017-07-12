@@ -98,14 +98,14 @@ export function sort(theArray){
     while(swapped){
         swapped = false;
         for(let i =0; i < theArray.length-1; i++){
-            if(theArray[i] > theArray[i+1]){
-                temp = theArray[i];
-                theArray[i] = theArray[i+1];
-                theArray[i+1] = temp;
+            if(a[i] > a[i+1]){
+                temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
                 swapped = true;
 
             };
         };
     };
-
+    return a;
 };
