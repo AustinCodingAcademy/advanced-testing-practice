@@ -33,11 +33,13 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc) {
-  let findArray = null;
+  // let findArray = null;
   for (let i = 0; i < theArray.length; i++) {
-    findArray = theArray.find(fnc);
+    if (fnc(theArray[i])){
+      return theArray[i];
+    };
   }
-  return findArray;
+  return null;
 }
 
 
@@ -78,21 +80,21 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
-//   let swapped = false;
-//   for (let i = 0; i < (theArray.length - 1); i++) {
-//     if (theArray[i] > theArray[i + 1]) {
-//       let current = theArray[i];
-//       let next = theArray[i + 1];
-//       theArray[i] = next;
-//       theArray[i + 1] = current;
-//       swapped = true;
-//     }
-//   }
-//   if (!swapped) {
-//     return theArray;
-//   } else {
-//     sort(theArray);
-//   }
-//   return theArray;
-//
+  // let swapped = false;
+  // for (let i = 0; i < (theArray.length - 1); i++) {
+  //   if (theArray[i] > theArray[i + 1]) {
+  //     let current = theArray[i];
+  //     let next = theArray[i + 1];
+  //     theArray[i] = next;
+  //     theArray[i + 1] = current;
+  //     swapped = true;
+  //   }
+  // }
+  // if (!swapped) {
+  //   return theArray;
+  // } else {
+  //   return sort(theArray);
+  // }
+  // return theArray;
+
 }
