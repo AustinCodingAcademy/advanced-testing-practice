@@ -6,7 +6,9 @@
 //return the new array
 export function map(theArray, fnc){
   let newArray = [];
-  newArray = theArray.map(fnc);
+  for (let i = 0; i < theArray.length; i++) {
+    newArray.push(fnc(theArray[i]));
+  }
   return newArray;
 }
 
@@ -17,7 +19,12 @@ export function map(theArray, fnc){
 //return the new array
 export function filter(theArray, fnc){
   let filteredArray = [];
-  filteredArray = theArray.filter(fnc);
+  for (let i = 0; i < theArray.length; i++) {
+    console.log(theArray[i]);
+    if (fnc(theArray[i])) {
+      filteredArray.push(theArray[i]);
+    }
+  }
   return filteredArray;
 
 }
@@ -38,7 +45,7 @@ export function find(theArray, fnc){
 //return the last item in theArray
 export function findLast(theArray){
   let lastArray = [];
-  lastArray = theArray.findLast(fnc);
+  lastArray = theArray.findLast(theArray);
   return lastArray;
 }
 
