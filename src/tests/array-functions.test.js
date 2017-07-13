@@ -1,4 +1,4 @@
-import {map,filter,find,findLast} from "../services/array-functions";
+import {map,filter,find,findLast,head,reverse,tail} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
 const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
 
@@ -63,11 +63,10 @@ describe("find", () => {
 });
 
 //findLast should find the last name of "Axe"
-// do we have an array that contains Axe's last name? Using AxeLastName for now
 
 describe("findLast", () => {
   it("should find the last name of Axe", () => {
-    expect(find(names, findLast)).toEqual("Axe");
+    expect(findLast(names)).toEqual("Axe");
   });
 });
 
