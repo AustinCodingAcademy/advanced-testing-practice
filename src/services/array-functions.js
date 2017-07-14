@@ -6,9 +6,11 @@
 //return the new array
 export function map(theArray, fnc){
   let newArray = [];
-  newArray = theArray.map(fnc);
+  for(let i=0; i<theArray.length; i++) {
+    newArray.push(fnc(theArray[i]));
+  };
   return newArray;
-}
+};
 
 //create a new array
 //loop theArray and call the fnc for each thing in the array,
@@ -17,10 +19,13 @@ export function map(theArray, fnc){
 //return the new array
 export function filter(theArray, fnc){
   let newArray = [];
-  newArray = theArray.filter(fnc);
+  for(let i=0; i<theArray.length; i++) {
+    if (fnc(theArray[i])) {
+      newArray.push(theArray[i]);
+    };
+  };
   return newArray;
-}
-
+};
 
 //loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
@@ -28,23 +33,22 @@ export function filter(theArray, fnc){
 //return null
 export function find(theArray, fnc){
   let found = null;
-  found = theArray.find(fnc);
+  for(let i=0; i<theArray.length; i++){
+    if(fnc(theArray[i])) {
+      found = theArray[i];
+    };
+  };
   return found;
-}
-
+};
 
 //return the last item in theArray
 export function findLast(theArray){
-  let found = null;
-  found = theArray[theArray.length - 1];
-  return found;
-}
+  return theArray[theArray.length - 1];
+};
 
 //return the first element of the array
 export function head(theArray){
-  let found = null;
-  found = theArray[0];
-  return found;
+  return theArray[0];
 }
 
 //create a new array
@@ -53,9 +57,11 @@ export function head(theArray){
 //return the new array
 export function reverse(theArray){
   let newArray = [];
-  newArray = theArray.reverse();
+  for(let i=theArray.length-1; i>=0; i--) {
+    newArray.push(theArray[i]);
+  };
   return newArray;
-}
+};
 
 //create a new array
 //loop theArray
@@ -63,9 +69,11 @@ export function reverse(theArray){
 //return the new array
 export function tail(theArray){
   let newArray = [];
-  newArray = theArray.slice(1);
+  for(let i=1; i<theArray.length; i++){
+    newArray.push(theArray[i]);
+  };
   return newArray;
-}
+};
 
 //implement the most basic sorting algorithm there is
 //assume the array will always have numbers
