@@ -11,15 +11,10 @@ function findThree(name){
 function findBarney(name){
   return name === "Barney";
 }
-function findAxe(name){
-  return name === "Axe";
-}
 function findJon(name){
   return name === "Jon";
 }
-function rev(name){
-  return "Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"
-}
+
 //head should find the first element in the array "Jon"
 describe("head", () => {
   it("should return the first element of an array 'Jon'", () => {
@@ -69,19 +64,13 @@ describe("find", () => {
 
 //findLast should find the last name of "Axe"
 describe("findLast", () => {
-  it("should find the last name of Axe", () => {
-    let lastArray = findLast(names,findAxe);
-    expect(lastArray).toEqual("Axe");
-  });
+
 });
 
 //reverse should return an array with the elements in the opposite order
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
 describe("reverse", () => {
-  it("should return an array with the elements in the opposite orde", () => {
-    let reversedArray = reverse(names,rev);
-    expect(reversedArray).toEqual(["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]);
-  });
+
 });
 
 //tail should return all elements in an array except the first one

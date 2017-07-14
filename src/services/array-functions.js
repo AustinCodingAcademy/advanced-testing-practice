@@ -47,16 +47,12 @@ export function find(theArray, fnc){
 
 //return the last item in theArray
 export function findLast(theArray){
-  let lastArray = [];
-  lastArray = theArray.findLast(theArray);
-  return lastArray;
+
 }
 
 //return the first element of the array
 export function head(theArray){
-  let head = [];
-  head = theArray.head(fnc);
-  return head;
+
 }
 
 //create a new array
@@ -64,9 +60,7 @@ export function head(theArray){
 //add the item from each loop to the new array
 //return the new array
 export function reverse(theArray){
-  let reversedArray = [];
-  reversedArray = theArray[theArray.reverse];
-  return reversedArray;
+
 }
 
 //create a new array
