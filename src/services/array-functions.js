@@ -5,7 +5,12 @@
 //add the returned value from fnc to the new array
 //return the new array
 export function map(theArray, fnc){
-  const newArray = theArray.map(fnc);
+  // const newArray = theArray.map(fnc);
+  let newArray = [];
+  for(var i=0; i < theArray.length; i++) {
+    let item = fnc(theArray[i]);
+    newArray.push(item);
+  }
   return newArray;
 };
 
@@ -15,8 +20,12 @@ export function map(theArray, fnc){
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
-  const newArray = theArray.filter(fnc);
-  return newArray;
+  // const newArray = theArray.filter(fnc);
+  var filteredArray = [];
+  for (var i = 0; i < theArray.length; i++) {
+    if (fnc(theArray[i])) filteredArray.push(theArray[i]);
+  }
+  return filteredArray;
 };
 
 
@@ -25,10 +34,15 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
+  // newArray.push(theArray.find(fnc));
   const newArray = [];
-  newArray.push(theArray.find(fnc));
-  return newArray;
-
+  for (var i = 0; i < theArray.length; i++) {
+    if (fnc(theArray[i])) {
+      newArray.push(theArray[i]);
+      return newArray;
+    }
+  }
+  return null;
 };
 
 
@@ -49,9 +63,15 @@ export function head(theArray){
 //add the item from each loop to the new array
 //return the new array
 export function reverse(theArray){
-  const copyTheArray = theArray;
-  const newArray = copyTheArray.reverse();
-  return newArray;
+  // const copyTheArray = theArray;
+  // const newArray = copyTheArray.reverse();
+  // return newArray;
+  var revArray = [];
+  var arrayLen = theArray.length;
+  for (var i = arrayLen-1; i >= 0; i--) {
+    revArray.push(theArray[i])
+  }
+  return revArray;
 };
 
 //create a new array
@@ -59,11 +79,12 @@ export function reverse(theArray){
 //add the item from each loop to the new array except the first item
 //return the new array
 export function tail(theArray){
-  const reverseTheArray = theArray.reverse();
-  const newArray = reverseTheArray.slice(1);
-  return newArray;
-  // I am simply returning the original 'theArray' and its reversed.
-  // Can't figure out why
+  // const newArray = theArray.slice(1);
+  const tailArray = [];
+  for (var i = 1; i < theArray.length; i++) {
+    tailArray.push(theArray[i])
+  }
+  return tailArray;
 };
 
 //implement the most basic sorting algorithm there is
@@ -78,6 +99,17 @@ export function tail(theArray){
 //if false return theArray
 export function sort(theArray){
   var sorted = false;
-
-
+  var newArray = [];
+  while (sorted === false) {
+    sorted = true;
+    for (var i=0; i < theArray.length-1; i++) {
+      if (theArray[i] > theArray[i+1]) {
+        var temp = theArray[i];
+        theArray[i] = theArray[i+1];
+        theArray[i+1] = temp;
+        sorted = false;
+      }
+    }
+  }
+  return theArray;
 }
