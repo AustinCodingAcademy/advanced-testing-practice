@@ -35,10 +35,13 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-  let findArray = [];
-  findArray = theArray.find(fnc);
-  return findArray;
-
+  let findB = "";
+  for (let i = 0; i < theArray.length; i++) {
+    if(fnc(theArray[i])) {
+      findB = theArray[i];
+    };
+  };
+  return findB
 }
 
 

@@ -63,8 +63,7 @@ describe("filter", () => {
 //find should find one name of "Barney"
 describe("find", () => {
   it("should find one name of Barney", () => {
-    let findArray = find(names,findBarney);
-    expect(findArray).toEqual("Barney");
+    expect(find(names,findBarney)).toEqual("Barney");
   });
 });
 
