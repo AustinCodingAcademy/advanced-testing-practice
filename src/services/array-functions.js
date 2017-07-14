@@ -1,29 +1,46 @@
 
 //in the function map, create a new array and store in a variable
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop into the call to fnc
 //add the returned value from fnc to the new array
 //return the new array
 export function map(theArray, fnc){
-
+  let newArray = [];
+  for (let i = 0; i < theArray.length; i++){
+    newArray.push(fnc(theArray[i]));
+  }
+  return newArray;
 }
 
 //create a new array
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
-
+  let newArray = [];
+  for (let i = 0; i < theArray.length; i++){
+    // console.log(theArray[i]);
+    if (fnc(theArray[i])){
+      newArray.push(theArray[i]);
+    };
+  };
+  return newArray;
 }
 
 
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
-//fnc will return true or false, if true return the item 
+//fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-
+  let newArray= [];
+  for (let i = 0; i < theArray.length; i++){
+    if(fnc(theArray[i])){
+      newArray.push(theArray[i]);
+    };
+  };
+  return newArray
 }
 
 
@@ -64,5 +81,16 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
-
+  let swapNecessary = true;
+  while(swapNecessary){
+    swapNecessary = false;
+    for (var i = 0; i < arr.length - 1; i++){
+      if (theArray[i] > theArray[i+1]) {
+        let temp = theArray[i];
+        theArray[i] = theArray[i+1];
+        theArray[i+1] = temp;
+        swapNecessary = true;
+      }
+    }
+  }
 }

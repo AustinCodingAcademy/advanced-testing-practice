@@ -18,7 +18,6 @@ describe("head", () => {
   });
 });
 
-d
 
 describe("map", () => {
   it("should prepend Hello to each name", () => {
@@ -43,10 +42,30 @@ describe("sort", () => {
   });
 });
 
-//filter should return an array with names of length 3
-//["Jon","Bob","Ted","Axe"]
+describe("filter", () => {
+  it("should return an array with names of length 3", () => {
+    expect(filter(names, findThree)).toEqual([
+      "Jon",
+      "Bob",
+      "Ted",
+      "Axe"
+    ]);
+  });
+});
 
 //find should find one name of "Barney"
+
+describe("find", () => {
+  it("should find one name", () => {
+    expect(find(names, findBarney)).toEqual([
+      "Barney"
+    ]);
+  });
+});
+
+
+
+
 
 //findLast should find the last name of "Axe"
 
