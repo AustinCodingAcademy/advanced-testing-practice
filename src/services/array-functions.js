@@ -21,8 +21,8 @@ export function map(theArray, fnc){
 export function filter(theArray, fnc){
   let filteredArray = [];
   for(var i = 0; i < theArray.length; i++){
-    // let item = fnc(theArray[i]);
-    if (theArray[i].length === 3) {
+    let item = fnc(theArray[i]);
+    if (item) {
       filteredArray.push(theArray[i]);
     }
  }
