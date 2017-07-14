@@ -54,9 +54,8 @@ describe("sort", () => {
 //["Jon","Bob","Ted","Axe"]
 describe("filter", () => {
   it("filter should return an array with names of length 3", () => {
-    let filteredArray = filter(names, findThree);
   
-    
+    let filteredArray = filter(names, findThree);
     expect(filteredArray).toEqual(["Jon", "Bob", "Ted", "Axe"]);
   });
 });
@@ -64,7 +63,7 @@ describe("filter", () => {
 //find should find one name of "Barney"
 describe("find", () => {
   it("find should return the name 'Barney'",()=>{
-
+    
   })
 })
 

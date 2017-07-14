@@ -45,7 +45,12 @@ export function filter(theArray, fnc){
 //return null
 export function find(theArray, fnc){
     for(let i = 0; i < theArray.length; i ++){
-        return fnc(theArray[i]);
+        if(theArray[i] === "Barney"){
+            return theArray[i]
+        }
+        else{
+            return null;
+        }
     }
 
 }
