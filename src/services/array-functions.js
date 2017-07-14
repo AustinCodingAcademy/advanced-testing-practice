@@ -6,18 +6,12 @@
 //return the new array
 
 export function map(theArray, fnc){
-  let newArray = [];
-  newArray = theArray.map(fnc);
-  return newArray;
+  const mappedArray = [];
+  for (let i = 0; i < theArray.length; i++) {
+    mappedArray.push(fnc(theArray[i]));
+  }
+  return mappedArray;
 }
-/* alternative soution
-export function map(theArray, fnc){
-  let newArray = [];
-  newArray = theArray.map(item => `Hello ${item}`);
-  return newArray;
-}
-*/
-
 
 //create a new array
 //loop theArray and call the fnc for each thing in the array,
@@ -26,22 +20,15 @@ export function map(theArray, fnc){
 //return the new array
 
 export function filter(theArray, fnc){
-  let newArray = [];
-  newArray = theArray.filter(fnc);
-  return newArray;
+  const filteredArray = [];
+  for(let i=0; i<theArray.length; i++) {
+    if(fnc(theArray[i])) {
+      filteredArray.push(theArray[i]);
+    }
+  }
+  return filteredArray;
 }
 
-/* alternative soution
-export function filter(theArray, fnc){
-  let newArray = [];
-  newArray = theArray.filter(item => {
-    if(item.length === 3) {
-      return true;
-    }
-  });
-  return newArray;
-}
-*/
 
 
 //loop theArray and call the fnc for each thing in the array,
@@ -49,32 +36,22 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-  let item = null;
-  item = theArray.find(fnc);
-  return item;
-}
-
-/* alternative soution
-export function find(theArray, fnc){
-  let item = null;
-  item = theArray.find(item => {
-    if(item === "Barney") {
-      return true;
+  for (let i = 0; i < theArray.length; i++) {
+    if(fnc(theArray[i])) {
+      return theArray[i];
     }
-  });
-  return item;
+  }
+  return null;
 }
-*/
 
 //return the last item in theArray
 export function findLast(theArray){
-  return theArray.pop()
+  return theArray[theArray.length - 1];
 }
 
 //return the first element of the array
 export function head(theArray){
-  let firstElement = theArray.shift();
-  return firstElement;
+  return theArray[0];
 }
 
 //create a new array
@@ -90,7 +67,8 @@ export function reverse(theArray){
 //add the item from each loop to the new array except the first item
 //return the new array
 export function tail(theArray){
-
+  let newArray = [];
+  newArray = theArray.slice(1);
 }
 
 //implement the most basic sorting algorithm there is
