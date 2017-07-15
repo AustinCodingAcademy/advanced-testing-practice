@@ -62,8 +62,8 @@ describe("filter", () => {
 
 //find should find one name of "Barney"
 describe("find", () => {
-  it("find should return the name 'Barney'",()=>{
-    
+  it("find should return the name 'Barney'", ()=> {
+    expect(names, findBarney).toEqual('Barney');
   })
 })
 
