@@ -63,15 +63,12 @@ describe("filter", () => {
 //find should find one name of "Barney"
 describe("find", () => {
   it("find should return the name 'Barney'", ()=> {
-    expect(findBarney(nam)).toEqual('Barney');
-  })
-})
+    expect(names, findBarney).toEqual('Barney');
+});
 
-//findLast should find the last name of "Axe"
+// findLast should find the last name of "Axe"
 
-//reverse should return an array with the elements in the opposite order
-//["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
-//tail should return all elements in an array except the first one
-//[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
+// reverse should return an array with the elements in the opposite order
+// ["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
+// tail should return all elements in an array except the first one
+// [Bob","Ted","Barney","Lilly","Robin","Saul","Axe"]
