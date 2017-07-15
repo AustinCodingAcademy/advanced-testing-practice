@@ -45,7 +45,7 @@ export function filter(theArray, fnc){
 //return null
 export function find(theArray, fnc){
     for(let i = 0; i < theArray.length; i ++){
-        if(fcn(theArray[i])){
+        if(fnc(theArray[i])){
             return theArray[i];
         }
         
@@ -92,27 +92,25 @@ export function tail(theArray){
 //if a swap is done set it to true
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
+
 export function sort(theArray){
     // theArray.sort(function(a,b){
     // return a-b;
     // });
-
     let a = theArray;
-    
-    var temp;
-    var swapped = true;
-    if(swapped){
-        swapped = false;
-        for(let i =0; i < theArray.length-1; i++){
-            if(a[i] > a[i+1]){
-                temp = a[i];
-                a[i] = a[i+1];
-                a[i+1] = temp;
-                swapped = true;
-
-            };
-        };
-    }else{
-        return a;
+    var swapped;
+        do{
+            swapped = false;
+            for (var i=0; i < a.length-1; i++) {
+                if (a[i] > a[i+1]) {
+                    var temp = a[i];
+                    a[i] = a[i+1];
+                    a[i+1] = temp;
+                    swapped = true;
+                }
+                
+           
+            }
+        }while(swapped)
+    return a;
     }
-};
