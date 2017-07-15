@@ -43,15 +43,6 @@ export function filter(theArray, fnc){
 //     passing in the item from the current loop
 //fnc will return true or false, if true return the item 
 //return null
-export function find(theArray, fnc){
-    for(let i = 0; i < theArray.length; i ++){
-        if(fnc(theArray[i])){
-            return theArray[i];
-        }
-        
-    }
-
-}
 
 
 //return the last item in theArray
