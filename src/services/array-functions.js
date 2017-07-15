@@ -46,11 +46,9 @@ export function filter(theArray, fnc){
 export function find(theArray, fnc){
     for(let i = 0; i < theArray.length; i ++){
         if(fcn(theArray[i])){
-            return theArray[i]
+            return theArray[i];
         }
-        else{
-            return null;
-        }
+        
     }
 
 }
