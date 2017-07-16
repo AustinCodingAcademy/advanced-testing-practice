@@ -1,4 +1,4 @@
-import {map,filter,find,findLast} from "../services/array-functions";
+import {map,filter,find,findLast,head} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
 const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
 
