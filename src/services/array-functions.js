@@ -34,14 +34,13 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-  let newArray= [];
   for (let i = 0; i < theArray.length; i++){
     if(fnc(theArray[i])){
-      newArray.push(theArray[i]);
+      return [theArray[i]];
     };
   };
-  return newArray
-}
+  // return null;
+};
 
 
 //return the last item in theArray
