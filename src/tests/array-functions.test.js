@@ -63,11 +63,17 @@ describe("find", () => {
   });
 });
 
-
-
-
-
 //findLast should find the last name of "Axe"
+
+describe("findLast", () => {
+  it("should find the last name of 'Axe'", () => {
+    expect(findLast(names)).toEqual(
+      "Axe"
+    );
+  });
+});
+
+
 
 //reverse should return an array with the elements in the opposite order
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]

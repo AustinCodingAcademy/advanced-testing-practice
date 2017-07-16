@@ -39,14 +39,12 @@ export function find(theArray, fnc){
       return [theArray[i]];
     };
   };
-  // return null;
 };
-
 
 //return the last item in theArray
 export function findLast(theArray){
-
-}
+      return theArray[theArray.length - 1];
+};
 
 //return the first element of the array
 export function head(theArray){
