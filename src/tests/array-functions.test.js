@@ -1,4 +1,4 @@
-import {map,filter,find,findLast,head,reverse} from "../services/array-functions";
+import {map,filter,find,findLast,head,reverse,tail} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
 const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
 
@@ -90,6 +90,19 @@ describe("reverse", () => {
   });
 });
 
-
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
+
+describe("tail", () => {
+  it("should return all elements in an array except the first one", () => {
+    expect(tail(names)).toEqual([
+      "Bob",
+      "Ted",
+      "Barney",
+      "Lilly",
+      "Robin",
+      "Saul",
+      "Axe"
+    ]);
+  });
+});

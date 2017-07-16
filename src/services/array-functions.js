@@ -55,7 +55,7 @@ export function head(theArray){
 //loop theArray in reverse order
 //add the item from each loop to the new array
 //return the new array
-export function reverse(theArray, fnc){
+export function reverse(theArray){
   let newArray = [];
   for(let i = theArray.length - 1; i > -1; i--){
     newArray.push(theArray[i]);
@@ -69,7 +69,11 @@ export function reverse(theArray, fnc){
 //add the item from each loop to the new array except the first item
 //return the new array
 export function tail(theArray){
-
+  let newArray = [];
+  for (let i = 1; i < theArray.length; i++){
+    newArray.push(theArray[i]);
+  }
+  return newArray;
 }
 
 //implement the most basic sorting algorithm there is
