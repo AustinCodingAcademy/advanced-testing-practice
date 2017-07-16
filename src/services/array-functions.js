@@ -55,9 +55,14 @@ export function head(theArray){
 //loop theArray in reverse order
 //add the item from each loop to the new array
 //return the new array
-export function reverse(theArray){
+export function reverse(theArray, fnc){
+  let newArray = [];
+  for(let i = theArray.length - 1; i > -1; i--){
+    newArray.push(theArray[i]);
+  };
+  return newArray
+};
 
-}
 
 //create a new array
 //loop theArray
