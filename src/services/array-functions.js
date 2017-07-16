@@ -38,8 +38,9 @@ export function find(theArray, fnc){
   const newArray = [];
   for (var i = 0; i < theArray.length; i++) {
     if (fnc(theArray[i])) {
-      newArray.push(theArray[i]);
-      return newArray;
+      // newArray.push(theArray[i]);
+      // return newArray;
+      return theArray[i];
     }
   }
   return null;
