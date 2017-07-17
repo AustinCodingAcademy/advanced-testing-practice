@@ -58,18 +58,14 @@ describe("filter", () => {
 //find should find one name of "Barney"
 describe("find", () => {
   it("should find one name of Barney", () => {
-    expect(find(names, findBarney)).toEqual([
-      "Barney"
-    ]);
+    expect(find(names, findBarney)).toEqual("Barney");
   });
 });
 
 //findLast should find the last name of "Axe"
 describe("findLast", () => {
   it("should find the last name of Axe", () => {
-    expect(findLast(names)).toEqual([
-      "Axe"
-    ]);
+    expect(findLast(names)).toEqual("Axe");
   });
 });
 

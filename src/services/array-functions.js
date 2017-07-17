@@ -49,9 +49,7 @@ export function find(theArray, fnc){
 
 //return the last item in theArray
 export function findLast(theArray){
-  const newArray = [];
-  newArray.push(theArray[theArray.length-1]);
-  return newArray;
+  return theArray[theArray.length-1];
 };
 
 //return the first element of the array
