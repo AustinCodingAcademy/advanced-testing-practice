@@ -14,9 +14,6 @@ export function map(theArray, fnc){
 }
 
 
-//newNames array is being returned correctly by console.log()-
-//but it is throwing undefined error when running test...
-//not sure why.
 
 
 
@@ -29,9 +26,18 @@ export function map(theArray, fnc){
 
 
 export function filter(theArray, fnc){
-  const newArray = theArray.filter(fnc);
-  return newArray;
+  const newArray = [];
+  for (let i = 0; i < theArray.length; i++){
+    let someThing = fnc(theArray[i]);
+    if (someThing){
+      newArray.push(theArray[i])
+}
+}
+      return newArray;
+
+
 };
+
 
 
 
@@ -41,10 +47,25 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-  var newArray = [];
-  newArray.push(theArray.find(fnc))
-  return newArray;
+  for(let i = 0; i < theArray.length; i++) {
+    let stuff = fnc(theArray[i]);
+
+    if (fnc(theArray[i])) {
+     return [theArray[i]];
+    }
+  }
+  return null;
 }
+
+
+
+
+
+//   below works but have to do it without using find
+//   var newArray = [];
+//   newArray.push(theArray.find(fnc))
+//   return newArray;
+// }
 
 
 //return the last item in theArray
