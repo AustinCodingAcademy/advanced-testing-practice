@@ -1,6 +1,6 @@
-import {map,filter,find,findLast,head,reverse,tail} from "../services/array-functions";
+import {map,filter,find,findLast,head,reverse,tail,sort} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
+const myNumbers = [4,3,55,22,99,1913,7,5,2,1];
 
 function addHello(name){
   return "Hello " + name;

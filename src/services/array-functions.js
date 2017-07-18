@@ -88,15 +88,18 @@ export function tail(theArray){
 //if false return theArray
 export function sort(theArray){
   let swapNecessary = true;
-  while(swapNecessary){
+  while (swapNecessary) {
     swapNecessary = false;
-    for (var i = 0; i < arr.length - 1; i++){
-      if (theArray[i] > theArray[i+1]) {
-        let temp = theArray[i];
-        theArray[i] = theArray[i+1];
-        theArray[i+1] = temp;
-        swapNecessary = true;
-      }
+    for(let i = 0; i < theArray.length - 1; i++){
+        if(theArray[i] > theArray[i + 1]){
+          let temp = theArray[i];
+          theArray[i] = theArray[i+1];
+          theArray[i+1] = temp;
+          swapNecessary = true;
+        }
     }
+
   }
+  return theArray;
+
 }
