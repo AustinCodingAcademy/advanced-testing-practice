@@ -9,7 +9,7 @@
 ### Add Calculation Tests
 * subtracts 4 from 5 to equal 1
 * multiply 4 by 5 to equal 20
-* device 100 by 4 to equal 25
+* devide 100 by 4 to equal 25
 
 ### Add Function Tests
 * Implement the tests as described in the comments
@@ -48,13 +48,10 @@
 ### Hopefully at this point you can see there is a pattern to making the tests
 
 ### ChangeTemperatureContainer.js
-* Create a test file for this container to ensure that when the text box changes, the state currentTemp changes 
+* Create a test file for this container to ensure that when the text box changes, the state currentTemp changes
 
 ### CityDropDownContainer.js
 * Create a test file to ensure that when the drop down changes, the state currentCity changes
 
 ### CurrentCityContainer.js
 * Create a test file to ensure that when the state currentCity is change, the text of the div changes to “CurrentCity: whatever city”
-
-
-
