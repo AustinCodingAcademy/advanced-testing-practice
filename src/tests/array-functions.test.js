@@ -1,4 +1,4 @@
-import {head,map,filter,find,findLast,sort} from "../services/array-functions";
+import {head,map,filter,find,findLast,sort,reverse,tail} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
 const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
 
@@ -47,17 +47,37 @@ describe("filter", () => {
   });
 });
 
+//find should find one name of "Barney"
+
 describe("find", () => {
   it("find should find one name of 'Barney'", () => {
     expect(find(names, findBarney)).toEqual("Barney")
   });
 });
 
-//find should find one name of "Barney"
-
 //findLast should find the last name of "Axe"
+
+describe("findLast", () => {
+  it("findLast should return the last item of the array", () => {
+    expect(findLast(names)).toEqual("Axe")
+  });
+})
 
 //reverse should return an array with the elements in the opposite order
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
+
+describe("reverse", () => {
+  it("reverse should return a new array with the elements in the opposite order", () => {
+    expect(reverse(names)).toEqual(["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"])
+  });
+})
+
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
+
+describe("tail", () => {
+  it("tail should return all elements in the array except the first item", () => {
+    expect(tail(names)).toEqual(["Bob","Ted","Barney","Lilly","Robin","Saul","Axe"])
+  });
+});
+

@@ -47,8 +47,15 @@ export function find(theArray, fnc){
 
 //return the last item in theArray
 export function findLast(theArray){
-
+  let lastItem = null;
+  for (let i = 0; i < theArray.length; i ++) {
+    if(theArray.indexOf(theArray[i]) === theArray.length - 1) {
+      lastItem = theArray[i];
+    };
+  };
+  return lastItem;
 }
+
 
 //return the first element of the array
 export function head(theArray){
@@ -61,16 +68,28 @@ export function head(theArray){
 //add the item from each loop to the new array
 //return the new array
 export function reverse(theArray){
-
+  let reversedArray = [];
+  for (let i = theArray.length - 1; i > -1; i --) {
+    reversedArray.push(theArray[i]);
+  };
+  return reversedArray;
 }
+
 
 //create a new array
 //loop theArray
 //add the item from each loop to the new array except the first item
 //return the new array
-export function tail(theArray){
 
+export function tail(theArray){
+  let tail = [];
+  for (let i = 1; i < theArray.length; i ++){
+    tail.push(theArray[i]);
+  };
+  return tail;
 }
+
+
 
 //implement the most basic sorting algorithm there is
 //assume the array will always have numbers
