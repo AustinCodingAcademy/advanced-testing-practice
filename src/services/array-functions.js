@@ -1,10 +1,22 @@
 
+
+
+
+
 //in the function map, create a new array and store in a variable
 //loop theArray and call the fnc for each thing in the array, 
 //     passing in the item from the current loop into the call to fnc
 //add the returned value from fnc to the new array
 //return the new array
+
+
 export function map(theArray, fnc){
+    let newArray = [];
+    for(let i=0; i < theArray.length; i ++){
+       newArray.push(fnc(theArray[i]));
+
+    }
+    return newArray;
 
 }
 
@@ -13,27 +25,35 @@ export function map(theArray, fnc){
 //     passing in the item from the current loop
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
-export function filter(theArray, fnc){
 
-}
+export function filter(theArray, fnc){
+    let newArray = [];
+    for(let i =0; i < theArray.length; i ++){
+        if(fnc(theArray[i])){
+            newArray.push(theArray[i]);
+        }
+    }
+        
+    return newArray;
+    }
+
 
 
 //loop theArray and call the fnc for each thing in the array, 
 //     passing in the item from the current loop
 //fnc will return true or false, if true return the item 
 //return null
-export function find(theArray, fnc){
-
-}
 
 
 //return the last item in theArray
 export function findLast(theArray){
+    return theArray[theArray.length-1];
 
 }
 
 //return the first element of the array
 export function head(theArray){
+    return theArray[0];
 
 }
 
@@ -63,6 +83,25 @@ export function tail(theArray){
 //if a swap is done set it to true
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
-export function sort(theArray){
 
-}
+export function sort(theArray){
+    // theArray.sort(function(a,b){
+    // return a-b;
+    // });
+    let a = theArray;
+    var swapped;
+        do{
+            swapped = false;
+            for (var i=0; i < a.length-1; i++) {
+                if (a[i] > a[i+1]) {
+                    var temp = a[i];
+                    a[i] = a[i+1];
+                    a[i+1] = temp;
+                    swapped = true;
+                }
+                
+           
+            }
+        }while(swapped)
+    return a;
+    }
