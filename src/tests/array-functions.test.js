@@ -1,4 +1,4 @@
-import {map,filter,find,findLast} from "../services/array-functions";
+import {map,filter,find,findLast,head,tail,reverse,sort} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
 const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
 
@@ -45,13 +45,53 @@ describe("sort", () => {
 //filter should return an array with names of length 3
 //["Jon","Bob","Ted","Axe"]
 
+describe("filter", () => {
+  it("should return an array with names of length 3", () => {
+    let filteredArray = filter(names, function(name) {
+      return name.length === 3;
+    });
+
+    expect(filteredArray).toEqual([
+      "Jon","Bob","Ted","Axe"
+    ]);
+  });
+});
+
 //find should find one name of "Barney"
+
+describe("find", () => {
+  it("should find one name of 'Barney' ", () => {
+  expect(find(names, findBarney)).toEqual("Barney");
+  });
+});
 
 //findLast should find the last name of "Axe"
 
+describe("findLast", () => {
+  it("should find the last name of 'Axe' ", () => {
+    expect(findLast(names)).toEqual("Axe");
+  });
+});
+
 //reverse should return an array with the elements in the opposite order
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
+describe("reverse", () => {
+  it("should return an array with the elements in the opposite order", () => {
+  const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
+  expect(reverse(names)).toEqual([
+    "Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"
+    ]);
+  });
+});
+
+
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
+describe("tail", () => {
+  it("should return all elements in an array except the first one", () => {
+    const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
+    expect(tail(names)).toEqual([
+      "Bob","Ted","Barney","Lilly","Robin","Saul","Axe"
+    ]);
+  });
+});
