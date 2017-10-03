@@ -19,6 +19,6 @@ describe("after", () => {
 //before should only call myFunc 4 times at most
 
 //once should only call add once
-//create a test that uses once on add 
+//create a test that uses once on add
 //call the returned function with 4 and 5 to result in 9
 //all subsequent calls should result in 9 no matter what arguments are provided
