@@ -1,4 +1,4 @@
-import {map,filter,find,findLast} from "../services/array-functions";
+import {map,filter,find,findLast,head,reverse} from "../services/array-functions";
 const names = ["Jon","Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
 const myNumbers = [4,3,55,22,99,1913,7,5,4,2,1];
 
@@ -11,6 +11,10 @@ function findThree(name){
 function findBarney(name){
   return name === "Barney";
 }
+function findJon(name){
+  return name === "Jon";
+}
+
 //head should find the first element in the array "Jon"
 describe("head", () => {
   it("should return the first element of an array 'Jon'", () => {
@@ -44,14 +48,30 @@ describe("sort", () => {
 
 //filter should return an array with names of length 3
 //["Jon","Bob","Ted","Axe"]
+describe("filter", () => {
+  it("should return an array with names of length 3", () => {
+    let filteredArray = filter(names,findThree);
+    expect(filteredArray).toEqual(["Jon","Bob","Ted","Axe"]);
+  });
+});
 
 //find should find one name of "Barney"
+describe("find", () => {
+  it("should find one name of Barney", () => {
+    expect(find(names,findBarney)).toEqual("Barney");
+  });
+});
 
 //findLast should find the last name of "Axe"
+describe("findLast", () => {
+
+});
 
 //reverse should return an array with the elements in the opposite order
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
+describe("reverse", () => {
+
+});
+
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
