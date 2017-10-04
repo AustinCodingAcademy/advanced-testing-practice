@@ -18,6 +18,17 @@ describe("head", () => {
   });
 });
 
+describe("find", () => {
+  it("should find the single name 'Barney'", () => {
+    expect(find(names, findBarney)).toEqual("Barney");
+  });
+});
+
+describe("filter", () => {
+  it("should find the single name 'Barney'", () => {
+    expect(filter(names, findThree)).toEqual("Barney");
+  });
+});
 
 describe("map", () => {
   it("should prepend Hello to each name", () => {
@@ -37,10 +48,11 @@ describe("map", () => {
 describe("sort", () => {
   it("should return an array with numbers in order", () => {
     expect(sort(myNumbers)).toEqual([
-      1,2,3,4,5,7,22,55,99,1913
+      1,2,3,4,4,5,7,22,55,99,1913
     ]);
   });
 });
+
 
 //filter should return an array with names of length 3
 //["Jon","Bob","Ted","Axe"]
@@ -53,5 +65,3 @@ describe("sort", () => {
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
