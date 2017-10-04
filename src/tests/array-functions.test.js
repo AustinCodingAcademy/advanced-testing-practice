@@ -34,6 +34,18 @@ describe("map", () => {
   });
 });
 
+describe("filter", () => {
+  it("should filter names with 3 letters", () => {
+    expect(find(names,findThree)).toEqual([3]);
+  });
+});
+
+describe("find", () => {
+  it("should find Barney", () => {
+    expect(find(names,findBarney)).toEqual(["Barney"]);
+  });
+});
+
 describe("sort", () => {
   it("should return an array with numbers in order", () => {
     expect(sort(myNumbers)).toEqual([

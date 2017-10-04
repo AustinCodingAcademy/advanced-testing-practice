@@ -1,11 +1,18 @@
 
 //in the function map, create a new array and store in a variable
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc ( fnc() )for each thing in the array, 
 //     passing in the item from the current loop into the call to fnc
 //add the returned value from fnc to the new array
-//return the new array
+//return the new array (1.square brackets, 2.for loop, add item=push in js syntax, all these functions use 'loop')
 export function map(theArray, fnc){
-
+    var newArray = []
+    for(var i = 0; i < theArray.length; i ++){
+        var currentItem = theArray[i];
+        fnc(currentItem);  //fnc means functoin and this---> calls it then pass in the 'thing'
+        var returnedItem = fnc(currentItem);
+        newArray.push(returnedItem); //newArray[i] = (returnedItem)  <---works too
+    }
+    return newArray; //outside of the loop so that it only happens once.
 }
 
 //create a new array
