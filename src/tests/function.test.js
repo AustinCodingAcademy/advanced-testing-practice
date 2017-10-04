@@ -8,10 +8,10 @@ describe("after", () => {
   it("should only call myFunc after it is called 4 times", () => {
     const myFunc = jest.fn();
     let myAfter = after(4, myFunc);
-    myAfter();
-    myAfter();
-    myAfter();
-    myAfter();
+    myAfter;
+    myAfter;
+    myAfter;
+    myAfter;
     expect(myFunc.mock.calls.length).toBe(1);
   });
 });
