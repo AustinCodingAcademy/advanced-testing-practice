@@ -5,7 +5,13 @@
 //add the returned value from fnc to the new array
 //return the new array
 export function map(theArray, fnc){
-
+    var newArray = [];
+    for(var i = 0 ; i < theArray.length; i++){
+        var currentItem = theyArray[i];
+        var returneditem = fnc(currentItem);
+        newArray[i]= (returneditem);
+    }
+    return newArray;
 }
 
 //create a new array
