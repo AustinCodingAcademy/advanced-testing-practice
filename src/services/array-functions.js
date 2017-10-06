@@ -49,12 +49,14 @@ export function find(theArray, fnc){
 
 //return the last item in theArray
 export function findLast(theArray){
-
+  var last = theArray[theArray.length-1]
+  return last;
 }
 
 //return the first element of the array
 export function head(theArray){
-
+  var first = theArray[0]
+  return first;
 }
 
 //create a new array
