@@ -1,29 +1,49 @@
 
 //in the function map, create a new array and store in a variable
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop into the call to fnc
 //add the returned value from fnc to the new array
 //return the new array
 export function map(theArray, fnc){
-
+  var newArray = [];
+  for(var i=0; i < theArray.length; i++){
+    var currentItem = thearray[i];
+    var returnedItem = fnc(currentItem);
+    newArray[i]= (returnedItem);
+  }
+  return newArray;
 }
 
 //create a new array
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
-
+  var newArray = [];
+  for(var i = 0; i < theArray.length; i++){
+    var currentItem = theArray[i];
+    var returnedItem = fnc(currentItem);
+    if (returnedItem = true) {
+      newArray.push(returnedItem);
+    }
+    return newArray;
 }
 
 
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
-//fnc will return true or false, if true return the item 
+//fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-
+  for(var i = 0; i < theArray.length; i++){
+    var currentItem = theArray[i];
+    var returnedItem = fnc(currentItem);
+    if (returnedItem = true) {
+      return returnedItem;
+  } else {
+  return null
+  }
 }
 
 
