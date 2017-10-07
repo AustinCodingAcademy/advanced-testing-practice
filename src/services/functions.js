@@ -7,6 +7,18 @@
   return the theAfter 
  */
 export function after(times, theFunc){
+    var counter=3;
+
+    const theAfter = () => {
+        console.log('counter, times', counter, times);
+        if (counter === times) {
+            theFunc();
+        }
+    };
+    counter += 1;
+    console.log('counter, times outside', counter, times);
+
+    return theAfter();
 
 }
 
@@ -19,7 +31,7 @@ export function after(times, theFunc){
   return the theBefore 
  */
 export function before(times, theFunc){
-
+    return true;
 }
 
 /*
@@ -33,5 +45,5 @@ return firstValue
 return theOnce
  */
 export function once(theFunc){
-  
+    return true;
 }
