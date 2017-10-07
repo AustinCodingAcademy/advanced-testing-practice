@@ -52,12 +52,12 @@ export function find(theArray, fnc){
 
 //return the last item in theArray
 export function findLast(theArray){
-
+  return theArray[theArray.length - 1];
 }
 
 //return the first element of the array
 export function head(theArray){
-
+  return theArray[0];
 }
 
 //create a new array
