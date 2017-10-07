@@ -41,8 +41,7 @@ export function find(theArray, fnc){
     var returnedItem = fnc(currentItem);
     if (returnedItem = true) {
       return returnedItem;
-  } else {
-  return null
+    }
   }
 }
 
@@ -96,5 +95,15 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
-
+  do {
+    for(var i = 0; i < theArray.length; i++) {
+      var currentItem = theArray[i];
+      var nextItem = theArray[i+1];
+      if (currentItem > secondItem) {
+        theArray[i] = nextItem;
+        theArray[i+1] = currentItem;
+      }
+    }
+  while (sorted = false)
+  }
 }
