@@ -96,14 +96,16 @@ export function tail(theArray){
 //if false return theArray
 export function sort(theArray){
   do {
+    var swap = false;
     for(var i = 0; i < theArray.length; i++) {
       var currentItem = theArray[i];
       var nextItem = theArray[i+1];
       if (currentItem > secondItem) {
         theArray[i] = nextItem;
         theArray[i+1] = currentItem;
+      var swap = true;
       }
     }
-  while (sorted = false)
+  while (swap);
   }
 }
