@@ -20,8 +20,16 @@ export function map(theArray, fnc){
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
-
-}
+  var newArray = [];
+  for(var i = 0; i < theArray.length; i++){
+      var currentItem = theArray[i];
+      var returnedItem = fnc(currentItem);
+      if(returnedItem){
+        newArray.push(theArray[i]);
+     }
+  }
+  return newArray;
+  }
 
 
 //loop theArray and call the fnc for each thing in the array,
@@ -29,7 +37,16 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-
+  var newArray = [];
+  for(var i = 0; i < theArray.length; i++){
+      var currentItem = theArray[i];
+      var returnedItem = fnc(currentItem);
+        if(returnedItem){
+          return theArray[i];
+       }
+     }
+     return null;
+    }
 }
 
 
