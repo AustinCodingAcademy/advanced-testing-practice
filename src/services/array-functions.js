@@ -1,40 +1,63 @@
 
-//in the function map, create a new array and store in a variable
-//loop theArray and call the fnc for each thing in the array, 
+//in the function map, create a new array and store in a variable - []
+//loop theArray and call the fnc for each thing in the array, - fnc()
 //     passing in the item from the current loop into the call to fnc
-//add the returned value from fnc to the new array
+//add the returned value from fnc to the new array -push
 //return the new array
 export function map(theArray, fnc){
-
+  var newArray = [];
+  for(var i = 0; i < theArray.length; i++){
+      var currentItem = theArray[i];
+      var returnedItem = fnc(currentItem);
+      newArray.push(returnedItem);
+  }
+  return newArray;
 }
 
 //create a new array
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
+  var newArray = [];
+  for(var i = 0; i < theArray.length; i++){
+      var currentItem = theArray[i];
+      var returnedItem = fnc(currentItem);
+      if(returnedItem){
+        newArray.push(theArray[i]);
+     }
+  }
+  return newArray;
+  }
 
-}
 
-
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
-//fnc will return true or false, if true return the item 
+//fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-
+  var newArray = [];
+  for(var i = 0; i < theArray.length; i++){
+      var currentItem = theArray[i];
+      var returnedItem = fnc(currentItem);
+        if(returnedItem){
+          return theArray[i];
+       }
+     }
+     return null;
+    }
 }
 
 
 //return the last item in theArray
 export function findLast(theArray){
-
+  return theArray[theArray.length - 1];
 }
 
 //return the first element of the array
 export function head(theArray){
-
+  return theArray[0];
 }
 
 //create a new array
