@@ -36,7 +36,7 @@ describe("map", () => {
 
 describe("filter", () => {
   it("should filter names with 3 letters", () => {
-    expect(find(names,findThree)).toEqual([3]);
+    expect(find(names,findThree)).toEqual(["Jon","Bob","Ted","Axe"]);
   });
 });
 
