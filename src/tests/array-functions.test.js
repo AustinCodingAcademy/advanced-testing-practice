@@ -34,6 +34,17 @@ describe("map", () => {
   });
 });
 
+describe("filter", () => {
+  it("should filter each name that has three letters", () => {
+    expect(filter(names,findThree)).toEqual([
+      "Jon",
+      "Bob",
+      "Ted",
+      "Axe"
+    ]);
+  });
+});
+
 describe("sort", () => {
   it("should return an array with numbers in order", () => {
     expect(sort(myNumbers)).toEqual([
@@ -53,5 +64,3 @@ describe("sort", () => {
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
