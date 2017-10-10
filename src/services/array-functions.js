@@ -89,8 +89,8 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
-  let swapped = false;
-  while (swapped = true) {
+  while (true) {
+    let swapped = false;
     for (var i = 0; i < theArray.length; i++) {
       if (theArray[i] > theArray[i+1]) {
         let temp = theArray[i];
@@ -102,6 +102,9 @@ export function sort(theArray){
         swapped = true;
       }
     }
+    if (swapped === false) {
+      return theArray;
+    }
   }
-  return theArray;
+
 }
