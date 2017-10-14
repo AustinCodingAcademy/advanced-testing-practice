@@ -11,6 +11,7 @@ function findThree(name){
 function findBarney(name){
   return name === "Barney";
 }
+
 //head should find the first element in the array "Jon"
 describe("head", () => {
   it("should return the first element of an array 'Jon'", () => {
@@ -42,16 +43,36 @@ describe("sort", () => {
   });
 });
 
-//filter should return an array with names of length 3
+describe("filter", () => {
+  it("should return array with names of length 3", () => {
+    expect(filter(names), findThree).toEqual(["Jon", "Bob", "Ted", "Axe"]);
+  });
+});//filter should return an array with names of length 3
 //["Jon","Bob","Ted","Axe"]
 
-//find should find one name of "Barney"
+describe("find", () => {
+  it("should find the single name of Barney", () => {
+    expect(find(names), findBarney).toEqual("Barney");
+  });
+});//find should find one name of "Barney"
 
-//findLast should find the last name of "Axe"
+describe("findLast", () => {
+  it("should find the last name in the array", () => {
+    expect(findLast(names)).toEqual("Axe");
+  });
+});//findLast should find the last name of "Axe"
 
-//reverse should return an array with the elements in the opposite order
+describe("reverse", () => {
+  it("should return array with elements in opposing order", () => {
+    expect(reverse(names)).toEqual(["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]);
+  });
+});//reverse should return an array with the elements in the opposite order
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
-//tail should return all elements in an array except the first one
+
+
+describe("tail", () => {
+  it("should return all elements except in array except first item", () => {
+    expect(tail(names)).toEqual(["Bob","Ted","Barney","Lilly","Robin","Saul","Axe"]);
+  });
+});//tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
