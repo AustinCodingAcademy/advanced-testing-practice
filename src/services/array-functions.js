@@ -9,7 +9,7 @@ export function map(theArray, fnc){
   for(var i=0; i < theArray.length; i++){
     var currentItem = thearray[i];
     var returnedItem = fnc(currentItem);
-    newArray[i]= (returnedItem);
+    newArray[i] = (returnedItem);
   }
   return newArray;
 }
@@ -24,7 +24,7 @@ export function filter(theArray, fnc){
   for(var i = 0; i < theArray.length; i++){
     var currentItem = theArray[i];
     var returnedItem = fnc(currentItem);
-    if (returnedItem = true) {
+    if (returnedItem === true) {
       newArray.push(returnedItem);
     }
     return newArray;
@@ -39,7 +39,7 @@ export function find(theArray, fnc){
   for(var i = 0; i < theArray.length; i++){
     var currentItem = theArray[i];
     var returnedItem = fnc(currentItem);
-    if (returnedItem = true) {
+    if (returnedItem === true) {
       return returnedItem;
     }
   }
