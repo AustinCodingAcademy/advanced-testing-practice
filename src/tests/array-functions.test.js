@@ -34,6 +34,17 @@ describe("map", () => {
   });
 });
 
+describe("filter", () => {
+  it("should return a new array of names with 3 letters in it", () => {
+    expect(filter(names, findThree)).toEqual([
+      'Jon',
+      'Bob',
+      'Ted',
+      'Axe'
+    ]);
+  });
+});
+
 describe("sort", () => {
   it("should return an array with numbers in order", () => {
     expect(sort(myNumbers)).toEqual([

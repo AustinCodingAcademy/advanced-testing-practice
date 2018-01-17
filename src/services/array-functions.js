@@ -21,7 +21,12 @@ export function map(theArray, fnc){
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
-
+  let filterNewArray = [];
+  for (i=0; i < theArray.length; i++)
+    if(fnc(theArray[i])){
+      filterNewArray.push(theArray[i]);
+    }
+  return filterNewArray;
 }
 
 
