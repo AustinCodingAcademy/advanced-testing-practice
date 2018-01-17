@@ -45,6 +45,12 @@ describe("filter", () => {
   });
 });
 
+describe("find", () => {
+  it("if should return Barney", () => {
+    expect(find(names, findBarney)).toEqual("Barney");
+  });
+});
+
 describe("sort", () => {
   it("should return an array with numbers in order", () => {
     expect(sort(myNumbers)).toEqual([

@@ -22,11 +22,12 @@ export function map(theArray, fnc){
 //return the new array
 export function filter(theArray, fnc){
   let filterNewArray = [];
-  for (i=0; i < theArray.length; i++)
+  for (i=0; i < theArray.length; i++){
     if(fnc(theArray[i])){
       filterNewArray.push(theArray[i]);
     }
   return filterNewArray;
+  }
 }
 
 
@@ -35,7 +36,14 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-
+  let newFindArray = [];
+  for (i=0; i < theArray.length; i++) {
+    if(fnc(theArray[i])){
+      return theArray[i]
+    } else {
+      return null
+    }
+  }
 }
 
 
