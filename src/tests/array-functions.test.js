@@ -45,12 +45,6 @@ describe("filter", () => {
   });
 });
 
-describe("find", () => {
-  it("if should return Barney", () => {
-    expect(find(names, findBarney)).toEqual("Barney");
-  });
-});
-
 describe("sort", () => {
   it("should return an array with numbers in order", () => {
     expect(sort(myNumbers)).toEqual([
@@ -62,7 +56,24 @@ describe("sort", () => {
 //filter should return an array with names of length 3
 //["Jon","Bob","Ted","Axe"]
 
+describe("filter", () => {
+  it("should return a new array of names with 3 letters in it", () => {
+    expect(filter(names, findThree)).toEqual([
+      'Jon',
+      'Bob',
+      'Ted',
+      'Axe'
+    ]);
+  });
+});
+
 //find should find one name of "Barney"
+
+describe("find", () => {
+  it("if should return Barney", () => {
+    expect(find(names, findBarney)).toEqual("Barney");
+  });
+});
 
 //findLast should find the last name of "Axe"
 
