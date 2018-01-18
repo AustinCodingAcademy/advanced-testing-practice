@@ -8,25 +8,54 @@
 //add the returned value from fnc to the new array
 //after looping, return the new array
 export function map(theArray, fnc){
-
+  let i = 0;
+  const newArray = [];
+  for (; i < theArray.length; i++) {
+    newArray.push(fnc(theArray[i]));
+}
+  return newArray;
 }
 
+// export function map(theArray, fnc){
+// const myArr = [];
+// const myMap = theArray.forEach((name) => {
+// myArr.push(fnc(name));
+// });
+// return myArr;
+// }
+
+
+
+
+
 //create a new array
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
-
+  let filterNewArray = [];
+  for (let i=0; i < theArray.length; i++){
+    if(fnc(theArray[i])){
+      filterNewArray.push(theArray[i]);
+    }
+  }
+  return filterNewArray;
 }
 
 
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
-//fnc will return true or false, if true return the item 
+//fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
-
+  let i = 0;
+  let newFindArray = [];
+  for (; i < theArray.length; i++) {
+    if(fnc(theArray[i])){
+      return theArray[i]
+    }
+  }
 }
 
 

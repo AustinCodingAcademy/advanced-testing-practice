@@ -12,12 +12,6 @@ function findBarney(name){
   return name === "Barney";
 }
 //head should find the first element in the array "Jon"
-describe("head", () => {
-  it("should return the first element of an array 'Jon'", () => {
-    expect(head(names)).toEqual("Jon");
-  });
-});
-
 
 describe("map", () => {
   it("should prepend Hello to each name", () => {
@@ -34,18 +28,27 @@ describe("map", () => {
   });
 });
 
-describe("sort", () => {
-  it("should return an array with numbers in order", () => {
-    expect(sort(myNumbers)).toEqual([
-      1,2,3,4,4,5,7,22,55,99,1913
+//filter should return an array with names of length 3
+//["Jon","Bob","Ted","Axe"]
+
+describe("filter", () => {
+  it("should return a new array of names with 3 letters in it", () => {
+    expect(filter(names, findThree)).toEqual([
+      'Jon',
+      'Bob',
+      'Ted',
+      'Axe'
     ]);
   });
 });
 
-//filter should return an array with names of length 3
-//["Jon","Bob","Ted","Axe"]
-
 //find should find one name of "Barney"
+
+describe("find", () => {
+  it("if should return Barney", () => {
+    expect(find(names, findBarney)).toEqual("Barney");
+  });
+});
 
 //findLast should find the last name of "Axe"
 
@@ -53,5 +56,3 @@ describe("sort", () => {
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
