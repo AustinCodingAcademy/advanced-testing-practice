@@ -5,7 +5,11 @@
 //add the returned value from fnc to the new array
 //return the new array
 export function map(theArray, fnc){
-
+  var result = [];
+  for (var i=0, j=theArray.length; i < j; i++) {
+    result.push(fnc(theArray[i]));
+  }
+  return result;
 }
 
 //create a new array
@@ -14,7 +18,13 @@ export function map(theArray, fnc){
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
-
+  var result = [];
+  for (var i=0, j=theArray.length; i < j; i++) {
+    if (fnc(theArray[i])) {
+      result.push(theArray[i]);
+    }
+  }
+  return result;
 }
 
 
@@ -23,18 +33,23 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item 
 //return null
 export function find(theArray, fnc){
-
+  for (var i=0, j=theArray.length; i < j; i++) {
+    if (fnc(theArray[i])) {
+      return theArray[i];
+    }
+  }
+  return false;
 }
 
 
 //return the last item in theArray
 export function findLast(theArray){
-
+  return theArray[theArray.length - 1];
 }
 
 //return the first element of the array
 export function head(theArray){
-
+  return theArray[0];
 }
 
 //create a new array
@@ -42,7 +57,11 @@ export function head(theArray){
 //add the item from each loop to the new array
 //return the new array
 export function reverse(theArray){
-
+  var result = [];
+  for (var i = theArray.length - 1; i >= 0; i--) {
+    result.push(theArray[i]);
+  }
+  return result;
 }
 
 //create a new array
@@ -50,7 +69,7 @@ export function reverse(theArray){
 //add the item from each loop to the new array except the first item
 //return the new array
 export function tail(theArray){
-
+  return theArray.slice(1);
 }
 
 //implement the most basic sorting algorithm there is
@@ -64,5 +83,26 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
-
+  var sorted = false;
+  
+  while (sorted === false) {
+    
+    var swapRequired = false;
+    
+    for (var i=0, j=theArray.length; i<j; i++) {
+      if (theArray[i] > theArray[i+1]) {
+        var num = theArray[i];
+        theArray.splice(i, 1);
+        theArray.splice(i+1, 0, num);
+        swapRequired = true;
+      }
+    }
+    
+    if (swapRequired === false) {
+      sorted = true;
+    }
+    
+  }
+  
+  return theArray;
 }
