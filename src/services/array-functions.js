@@ -8,12 +8,24 @@
 //add the returned value from fnc to the new array
 //after looping, return the new array
 export function map(theArray, fnc){
-  const newArray = [ ]
+  const newArray = [];
   for (i = 0; i < theArray.length; i++) {
     newArray.push(fnc(theArray[i]));
 }
-  return newArray
+  return newArray;
 }
+
+// export function map(theArray, fnc){
+// const myArr = [];
+// const myMap = theArray.forEach((name) => {
+// myArr.push(fnc(name));
+// });
+// return myArr;
+// }
+
+
+
+
 
 //create a new array
 //loop theArray and call the fnc for each thing in the array,
@@ -22,12 +34,12 @@ export function map(theArray, fnc){
 //return the new array
 export function filter(theArray, fnc){
   let filterNewArray = [];
-  for (i=0; i < theArray.length; i++){
+  for (let i=0; i < theArray.length; i++){
     if(fnc(theArray[i])){
       filterNewArray.push(theArray[i]);
     }
-  return filterNewArray;
   }
+  return filterNewArray;
 }
 
 
