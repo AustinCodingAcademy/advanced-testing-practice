@@ -8,8 +8,9 @@
 //add the returned value from fnc to the new array
 //after looping, return the new array
 export function map(theArray, fnc){
+  let i = 0;
   const newArray = [];
-  for (i = 0; i < theArray.length; i++) {
+  for (; i < theArray.length; i++) {
     newArray.push(fnc(theArray[i]));
 }
   return newArray;
@@ -48,12 +49,11 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item
 //return null
 export function find(theArray, fnc){
+  let i = 0;
   let newFindArray = [];
-  for (i=0; i < theArray.length; i++) {
+  for (; i < theArray.length; i++) {
     if(fnc(theArray[i])){
       return theArray[i]
-    } else {
-      return null
     }
   }
 }
