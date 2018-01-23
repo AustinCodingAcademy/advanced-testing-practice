@@ -11,6 +11,8 @@ function findThree(name){
 function findBarney(name){
   return name === "Barney";
 }
+
+
 //head should find the first element in the array "Jon"
 describe("head", () => {
   it("should return the first element of an array 'Jon'", () => {
@@ -53,5 +55,3 @@ describe("sort", () => {
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
