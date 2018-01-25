@@ -45,13 +45,35 @@ describe("sort", () => {
 //filter should return an array with names of length 3
 //["Jon","Bob","Ted","Axe"]
 
+describe("filter", () => {
+  it("should return an array with names of length 3", () => {
+    expect(filter(names,findThree)).toEqual([
+      "Jon","Bob","Ted","Axe"
+    ]);
+  });
+});
+
 //find should find one name of "Barney"
 
+describe("find", () => {
+  it("should find one name of Barney", () => {
+    expect(find(names,findBarney)).toEqual(
+      "Barney"
+    );
+  });
+});
+
 //findLast should find the last name of "Axe"
+
+describe("findLast", () => {
+  it("should find the last name in the array - Axe", () => {
+    expect(findLast(names)).toEqual(
+      "Axe"
+    );
+  });
+});
 
 //reverse should return an array with the elements in the opposite order
 //["Axe","Saul","Robin","Lilly","Barney","Ted","Bob","Jon"]
 //tail should return all elements in an array except the first one
 //[Bob","Ted","Barney","Lilly","Robin","Saul","Axe"];
-
-
