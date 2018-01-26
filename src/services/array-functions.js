@@ -55,7 +55,7 @@ export function findLast(theArray){
 
 //return the first element of the array
 export function head(theArray){
-
+  return theArray[0];
 }
 
 //create a new array
@@ -85,5 +85,19 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
-
+  let swap = false;
+  for(let i=0;i<theArray.length;i++) {
+    if(theArray[i] > theArray[i+1]) {
+      let temp = theArray[i];
+      theArray[i] = theArray[i+1]
+      theArray[i+1] = temp;
+      swap = true;
+    }
+  }
+  if (swap) {
+    swap = false;
+    return sort(theArray);
+  } else {
+    return theArray;
+  }
 }
