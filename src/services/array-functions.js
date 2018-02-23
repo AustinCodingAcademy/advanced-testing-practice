@@ -8,7 +8,13 @@
 //add the returned value from fnc to the new array
 //after looping, return the new array
 export function map(theArray, fnc){
+    arr = [];
 
+    theArray.forEach(el => {
+        arr.push(fnc(el));
+    });
+
+    return arr;
 }
 
 //create a new array
@@ -17,7 +23,15 @@ export function map(theArray, fnc){
 //fnc will return true or false, if true add the item to the new array else do not
 //return the new array
 export function filter(theArray, fnc){
+    arr = [];
 
+    theArray.forEach(el => {
+        if (fnc(el)) {
+          arr.push(fnc(el));
+        }
+    });
+
+    return arr;
 }
 
 
@@ -26,18 +40,26 @@ export function filter(theArray, fnc){
 //fnc will return true or false, if true return the item 
 //return null
 export function find(theArray, fnc){
+    arr = [];
 
+    theArray.forEach(el => {
+        if (fnc(el)) {
+          arr.push(fnc(el));
+}
+    });
+
+    return arr[0];
 }
 
 
 //return the last item in theArray
 export function findLast(theArray){
-
+    return theArray[theArray.length - 1];
 }
 
 //return the first element of the array
 export function head(theArray){
-
+    return theArray[0];
 }
 
 //create a new array
@@ -45,7 +67,13 @@ export function head(theArray){
 //add the item from each loop to the new array
 //return the new array
 export function reverse(theArray){
+    arr = [];
 
+    theArray.forEach(el => {
+        arr.unshift(el);
+    });
+
+    return arr;
 }
 
 //create a new array
@@ -53,9 +81,17 @@ export function reverse(theArray){
 //add the item from each loop to the new array except the first item
 //return the new array
 export function tail(theArray){
+    arr = [];
 
+    theArray.forEach(el => {
+        arr.push(el);
+    });
+  
+    arr.shift();
+    return arr;
 }
 
+// TOO COMPLICATED!:
 //implement the most basic sorting algorithm there is
 //assume the array will always have numbers
 //use a while loop to constantly loop theArray until it is sorted
@@ -67,5 +103,17 @@ export function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 export function sort(theArray){
+    sortedArr = [];
 
+    theArray.forEach( (el, i, arr) => {
+        if (i == 0) {
+            sortedArr.push(el);
+        } else if (el >= arr[i - 1]) {
+            sortedArr.push(el);
+        } else {
+            sortedArr.unshift(el);
+        }
+    });
+
+    return sortedArr;
 }
